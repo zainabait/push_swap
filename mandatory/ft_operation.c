@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 23:02:52 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/06 17:03:30 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/09 11:30:01 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	max_pos(t_list **s1)
 {
 	t_list	*max;
 
-	max = ft_lstmax(s1);
+	max = ft_lstmax(*s1);
 	return (max->position);
 }
 // void ff()

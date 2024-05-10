@@ -6,14 +6,14 @@
 #    By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/02 14:30:43 by zait-bel          #+#    #+#              #
-#    Updated: 2024/04/05 17:41:55 by zait-bel         ###   ########.fr        #
+#    Updated: 2024/05/09 11:28:20 by zait-bel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = ./mandatory/push_swap.c ./mandatory/ft_split.c ./mandatory/ft_strjoin.c ./mandatory/ft_utils.c ./mandatory/ft_operation.c ./mandatory/ft_operation2.c ./mandatory/ft_sort.c
+SRC = ./mandatory/push_swap.c ./mandatory/ft_split.c ./mandatory/ft_utils2.c ./mandatory/ft_utils.c ./mandatory/ft_operation.c ./mandatory/ft_operation2.c ./mandatory/ft_sort.c ./mandatory/ft_lst.c
 
 SRCBONUS = ./bonus/push_swap_bonus.c ./bonus/utils_bonus.c ./bonus/ft_split_bonus.c ./bonus/ft_strjoin_bonus.c ./bonus/get_next_line_bonus.c ./bonus/get_next_line_utils_bonus.c
 

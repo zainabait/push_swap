@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:51:45 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/06 13:38:16 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/10 11:26:21 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,14 @@ void	ft_index(t_list **s1, t_list *node)
 void	ft_position(t_list **s1)
 {
 	t_list	*tmp;
+	int		i;
 
+	i = 0;
 	tmp = *s1;
-	tmp->position = 0;
 	while (tmp)
 	{
-		tmp->position++;
+		tmp->position = i;
 		tmp = tmp->next;
+		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:22:44 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/08 12:39:01 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:45:21 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct swap
 {
 	char	*sp;
 	char	*join;
+	char	*join2;
 	char	**s;
 	int		j;
 	int		k;
@@ -43,6 +44,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmax(t_list *lst);
+int		lst_size(t_list *lst);
 void	rotate_s1(t_list **s1, char *str);
 void	rrs1(t_list **s1, char *str);
 void	swap(t_list **lst, char	*str);
@@ -56,6 +58,7 @@ void	ft_lstclear(t_list **lst);
 void	ft_index(t_list **s1, t_list *node);
 void	ft_position(t_list **s1);
 int		max_pos(t_list **s1);
-int		ft_sort(t_list **a, t_list **b);
+int		ft_sort(t_list **a, t_list **b, int i);
+void	ft_push_a(t_list **a, t_list **b);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:24:12 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/08 11:51:56 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/10 15:48:57 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ft_stack(char	**s)
 	i = -1;
 	while (s[++i])
 		ft_lstadd_back(&lst_a, ft_lstnew(&lst_a, ft_atoi(s[i])));
+	ft_position(&lst_a);
 	tmp = lst_a;
 	while (tmp->next)
 	{
@@ -37,14 +38,10 @@ void	ft_stack(char	**s)
 	(i <= 3) && ft_sort_3(&lst_a);
 	(i == 4) && ft_sort_4(&lst_a, &lst_b);
 	(i == 5) && ft_sort_5(&lst_a, &lst_b);
-	(i > 5 && i <= 100) && ft_sort(&lst_a, &lst_b);
-	while (lst_a)
-	{
-		printf("%d\n", (lst_a)->content);
-		(lst_a) = (lst_a)->next;
-	}
-	ft_lstclear(&lst_a);
+	(i > 5) && ft_sort(&lst_a, &lst_b, i);
+	(ft_lstclear(&lst_a), ft_lstclear(&lst_b));
 }
+
 void ff()
 {
 	system("leaks push_swap");
@@ -55,6 +52,7 @@ int	main(int argc, char *argv[])
 	t_swap	t;
 
 	t.j = 0;
+	t.join = NULL;
 	if (argc > 1)
 	{
 		while (argv[++t.j])
@@ -64,7 +62,7 @@ int	main(int argc, char *argv[])
 				t.k++;
 			(!argv[t.j][t.k]) && (ft_error("Error"));
 			t.sp = ft_strjoin(argv[t.j], " ");
-			(t.join = ft_strjoin(t.join, t.sp), free(t.sp));
+			(t.join2 = ft_strjoin(t.join, t.sp), free(t.join), t.join = t.join2, free(t.sp));
 		}
 		t.j = -1;
 		(t.s = ft_split(t.join, ' '), free(t.join));
@@ -77,6 +75,6 @@ int	main(int argc, char *argv[])
 		}
 		
 		(ft_stack(t.s), ft_free2(t.s));
-		atexit(ff);
+		// atexit(ff);
 	}
 }

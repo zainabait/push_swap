@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_utils2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 14:28:50 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/03 15:56:04 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/10 13:45:16 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	**ft_free2(char **arr)
-{
-	size_t	j;
-
-	if (!arr)
-		return (NULL);
-	j = 0;
-	while (arr[j])
-	{
-		free (arr[j]);
-		j++;
-	}
-	free(arr);
-	return (NULL);
-}
 
 size_t	ft_strlen(char *s)
 {
@@ -83,7 +67,8 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	while (s2[j])
 		str[i++] = s2[j++];
-	return (str[i] = '\0', str);
+	str[i] = '\0';
+	return (str);
 }
 
 int	ft_error(char	*str)
