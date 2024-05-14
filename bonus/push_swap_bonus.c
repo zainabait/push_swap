@@ -1,49 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/29 21:24:12 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 19:33:55 by zait-bel         ###   ########.fr       */
+/*   Created: 2024/05/11 10:27:20 by zait-bel          #+#    #+#             */
+/*   Updated: 2024/05/14 19:51:22 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	ft_stack(char	**s)
 {
 	int		i;
 	t_list	*lst_a;
 	t_list	*lst_b;
-	t_list	*tmp;
 
 	lst_a = NULL;
 	lst_b = NULL;
 	i = -1;
 	while (s[++i])
-		ft_lstadd_back(&lst_a, ft_lstnew(&lst_a, ft_atoi(s[i])));
-	ft_position(&lst_a);
-	tmp = lst_a;
-	while (tmp->next)
-	{
-		if (tmp->content > tmp->next->content)
-			break ;
-		if (!tmp->next->next)
-			exit(0);
-		tmp = tmp->next;
-	}
-	(i <= 3) && ft_sort_3(&lst_a);
-	(i == 4) && ft_sort_4(&lst_a, &lst_b);
-	(i == 5) && ft_sort_5(&lst_a, &lst_b);
-	(i > 5) && ft_sort(&lst_a, &lst_b, i);
-	(ft_lstclear(&lst_a), ft_lstclear(&lst_b));
+		ft_lstadd_back(&lst_a, ft_lstnew(ft_atoi(s[i])));
+	ft_sort(&lst_a, &lst_b);
+	ft_lstclear(&lst_a);
 }
+
 void ff()
 {
-	system("leaks push_swap");
+	system("leaks checker");
 }
+
 void	ft_double(t_swap t)
 {
 	t.j = -1;
