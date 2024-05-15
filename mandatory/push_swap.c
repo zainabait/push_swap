@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:24:12 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/15 18:07:42 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:26:33 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_stack(char	**s)
 		if (tmp->content > tmp->next->content)
 			break ;
 		if (!tmp->next->next)
-			exit(0);
+			return (ft_lstclear(&lst_a));
 		tmp = tmp->next;
 	}
 	(i <= 3) && ft_sort_3(&lst_a);
