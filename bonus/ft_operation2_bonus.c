@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 14:51:45 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 19:48:40 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:51:03 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	ss(t_list **sa, t_list **sb)
 {
 	swap(sa, NULL);
 	swap(sb, NULL);
-	write(1, "ss\n", 4);
 }
 
 void	push_s1(t_list **s1, t_list **s2, char	*str)

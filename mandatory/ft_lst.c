@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:48:48 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/10 12:14:21 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:54:05 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-#include <stdio.h>
+
 void	ft_lstclear(t_list **lst)
 {
 	t_list	*swap;
-	
+
 	if (!lst)
 		return ;
 	while (*lst)

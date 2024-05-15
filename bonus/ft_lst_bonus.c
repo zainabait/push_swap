@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:48:48 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 14:48:37 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:45:26 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	ft_lstclear(t_list **lst)
 	while (*lst)
 	{
 		swap = (*lst)->next;
+		free((*lst)->con);
 		free(*lst);
 		*lst = NULL;
 		*lst = swap;

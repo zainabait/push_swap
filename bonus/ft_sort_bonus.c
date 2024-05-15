@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 11:54:06 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 19:52:08 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:04:22 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ int	ft_sort(t_list **a, t_list **b)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	return (free(mv), ft_lstclear(&lst), 0);
+	ft_lstclear(&lst);
+	return (0);
 }
 
 void	ft_op2(t_list **a, t_list **b, t_list *lst)

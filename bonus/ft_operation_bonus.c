@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 23:02:52 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 14:49:13 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 17:50:50 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	rr(t_list **sa, t_list **sb)
 {
 	rotate_s1(sa, NULL);
 	rotate_s1(sb, NULL);
-	write(1, "rr\n", 4);
 }
 
 void	rrs1(t_list **s1, char *str)
@@ -54,5 +53,4 @@ void	rrr(t_list **sa, t_list **sb)
 {
 	rrs1(sa, NULL);
 	rrs1(sb, NULL);
-	write(1, "rrr\n", 4);
 }

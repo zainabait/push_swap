@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:24:12 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 19:33:55 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:07:42 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,9 @@ void	ft_stack(char	**s)
 	(i == 4) && ft_sort_4(&lst_a, &lst_b);
 	(i == 5) && ft_sort_5(&lst_a, &lst_b);
 	(i > 5) && ft_sort(&lst_a, &lst_b, i);
-	(ft_lstclear(&lst_a), ft_lstclear(&lst_b));
+	ft_lstclear(&lst_a);
 }
-void ff()
-{
-	system("leaks push_swap");
-}
+
 void	ft_double(t_swap t)
 {
 	t.j = -1;
@@ -52,7 +49,10 @@ void	ft_double(t_swap t)
 		t.k = t.j;
 		(!t.s[t.k + 1]) && ft_atoi(t.s[t.j]);
 		while (t.s[++t.k])
-			(ft_atoi(t.s[t.j]) == ft_atoi(t.s[t.k])) && ft_error("Error\n");
+		{
+			if (ft_atoi(t.s[t.j]) == ft_atoi(t.s[t.k]))
+				(ft_free2(t.s), ft_error("Error\n"));
+		}
 	}
 }
 

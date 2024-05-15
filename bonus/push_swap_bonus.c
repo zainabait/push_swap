@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 10:27:20 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 19:51:22 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/15 18:08:07 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,6 @@ void	ft_stack(char	**s)
 	ft_lstclear(&lst_a);
 }
 
-void ff()
-{
-	system("leaks checker");
-}
-
 void	ft_double(t_swap t)
 {
 	t.j = -1;
@@ -40,7 +35,10 @@ void	ft_double(t_swap t)
 		t.k = t.j;
 		(!t.s[t.k + 1]) && ft_atoi(t.s[t.j]);
 		while (t.s[++t.k])
-			(ft_atoi(t.s[t.j]) == ft_atoi(t.s[t.k])) && ft_error("Error\n");
+		{
+			if (ft_atoi(t.s[t.j]) == ft_atoi(t.s[t.k]))
+				(ft_free2(t.s), ft_error("Error\n"));
+		}
 	}
 }
 
