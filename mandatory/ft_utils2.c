@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 14:28:50 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/10 13:45:16 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:17:50 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int	ft_error(char	*str)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str, int *error)
 {
 	int		i;
 	int		s;
@@ -94,14 +94,14 @@ int	ft_atoi(const char *str)
 		(str[i] == '-') && (s = -1);
 		i++;
 	}
-	(!str[i]) && (ft_error("Error"));
+	(!str[i]) && (*error = 1);
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		r = (r * 10) + str[i] - 48;
-		((r > __INT_MAX__) && s == 1) && ft_error("Error");
-		((r - 1 > __INT_MAX__) && s == -1) && ft_error("Error");
+		((r > __INT_MAX__) && s == 1) && (*error = 1);
+		((r - 1 > __INT_MAX__) && s == -1) && (*error = 1);
 		i++;
 	}
-	(str[i]) && (ft_error("Error"));
+	(str[i]) && ((*error = 1));
 	return (r * s);
 }

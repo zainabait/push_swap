@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 10:50:02 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/14 18:28:52 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:11:39 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ typedef struct s_list
 char	**ft_split(char *s, char c);
 size_t	ft_strlen(char *s);
 int		ft_error(char	*str);
-int		ft_atoi(const char *str);
+int		ft_atoi(const char *str, int *error);
 char	*ft_strjoin(char *s1, char *s2);
 t_list	*ft_lstnew(int content);
 t_list	*ft_lstnew2(char *content);
@@ -62,7 +62,7 @@ void	push_s1(t_list **s1, t_list **s2, char	*str);
 t_list	*ft_lstmin(t_list *lst);
 void	**ft_free2(char **arr);
 void	ft_lstclear(t_list **lst);
-int		ft_sort(t_list **a, t_list **b);
+int		ft_sort(t_list **a, t_list **b, t_swap t);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin2(char *s1, char *s2);
 int		ft_strcmp(char const *s1, char const *s2);
