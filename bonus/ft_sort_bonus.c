@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 11:54:06 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/16 12:26:41 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:04:43 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_sort(t_list **a, t_list **b, t_swap t)
 	{
 		if (!ft_search(mv))
 		{
-			(ft_lstclear(&lst), ft_lstclear(a));
+			(ft_lstclear(&lst, 1), ft_lstclear(a, 0));
 			(ft_free2(t.s), ft_error("Error\n"));
 		}
 		ft_lstadd_back(&lst, ft_lstnew2(mv));
@@ -55,7 +55,7 @@ int	ft_sort(t_list **a, t_list **b, t_swap t)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
-	ft_lstclear(&lst);
+	ft_lstclear(&lst, 1);
 	return (0);
 }
 

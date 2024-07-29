@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 21:24:12 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/16 12:15:52 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/06/10 15:06:03 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ void	ft_double(t_swap t)
 	while (t.s[++t.j])
 	{
 		t.k = t.j;
+		if (!t.s[t.k + 1])
+		{
+			ft_atoi(t.s[t.k], &error);
+			if (error == 1)
+				(ft_free2(t.s), ft_error("Error\n"));
+		}
 		while (t.s[++t.k])
 		{
 			if (ft_atoi(t.s[t.j], &error) == ft_atoi(t.s[t.k], &error))
@@ -73,7 +79,7 @@ int	main(int argc, char *argv[])
 			t.k = 0;
 			while (argv[t.j][t.k] == 32)
 				t.k++;
-			(!argv[t.j][t.k]) && (free(t.join2), ft_error("Error"));
+			(!argv[t.j][t.k]) && (ft_error("Error"));
 			t.sp = ft_strjoin(argv[t.j], " ");
 			t.join2 = ft_strjoin(t.join, t.sp);
 			(free(t.join), t.join = t.join2, free(t.sp));

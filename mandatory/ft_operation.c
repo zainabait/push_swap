@@ -6,12 +6,11 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 23:02:52 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/16 12:22:26 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:51:40 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	rotate_s1(t_list **s1, char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/08 16:48:48 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/15 17:45:26 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:47:08 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last->next = new;
 }
 
-void	ft_lstclear(t_list **lst)
+void	ft_lstclear(t_list **lst, int i)
 {
 	t_list	*swap;
 
@@ -62,7 +62,8 @@ void	ft_lstclear(t_list **lst)
 	while (*lst)
 	{
 		swap = (*lst)->next;
-		free((*lst)->con);
+		if (i == 1)
+			free((*lst)->con);
 		free(*lst);
 		*lst = NULL;
 		*lst = swap;

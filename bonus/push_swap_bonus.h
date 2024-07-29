@@ -6,7 +6,7 @@
 /*   By: zait-bel <zait-bel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 10:50:02 by zait-bel          #+#    #+#             */
-/*   Updated: 2024/05/16 12:11:39 by zait-bel         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:51:30 by zait-bel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ typedef struct s_list
 {
 	int				content;
 	char			*con;
-	int				index;
-	int				position;
 	struct s_list	*next;
 }	t_list;
 
@@ -61,7 +59,7 @@ void	swap(t_list **lst, char	*str);
 void	push_s1(t_list **s1, t_list **s2, char	*str);
 t_list	*ft_lstmin(t_list *lst);
 void	**ft_free2(char **arr);
-void	ft_lstclear(t_list **lst);
+void	ft_lstclear(t_list **lst, int i);
 int		ft_sort(t_list **a, t_list **b, t_swap t);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin2(char *s1, char *s2);
